@@ -1,0 +1,954 @@
+ 共用 */
+/* --------------------------------------------------------------- */
+/*全域樣式*/
+*{
+box-sizing: border-box;
+position:relative;
+/* border: 1px #000; */
+}
+.clearfix{
+display: block;
+/*float以下的區塊可以正常排列
+float寫right clear 就要寫right
+clear both 就都可以適用 */
+clear: both;
+height: 0px;
+visibility: hidden;
+}
+
+html,body{
+height:100%;
+width:100%;
+margin:0;
+padding:0;
+}
+
+.content{
+  margin: 64px 0;
+}
+.box{
+  margin: 32px 0;
+}
+
+@media screen and (min-width:768px) and (max-width:1200px){
+  .col-sm-3{
+    width: 50%;
+  }
+}
+
+
+/*--------*\
+    font
+\*--------*/
+html,body{
+font-family:"微軟正黑體", Arial ;
+font-size: 14px;
+}
+h1{
+  font-size: 2em;
+  font-weight: 700;
+}
+h2{
+  font-size: 1.6em;
+  font-weight: 700;
+}
+h3{
+  font-size: 1.4em;
+  font-weight: 700;
+}
+h4{
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: 32px;
+}
+h5{
+  font-size: 1.2em;
+  font-weight: 700;
+  line-height: 32px;
+}
+h6{
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 32px;
+}
+p{
+  font-size: 1em!important;
+}
+
+i{padding: 0 4px;}
+
+a,a:hover,
+p,p:hover{
+text-decoration: none;
+color: #000;
+}
+
+/*--------------------*\
+   標題底下的橘黃色塊
+\*--------------------*/
+.yellow-title-lg{
+  position: relative;
+  width: 360px;
+  left: 5px;
+  padding: 0 0 2px 0;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+.yellow-title-lg:after{
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  left: -8px;
+  width: 100%;
+  border-bottom: 10px #feb320 solid;
+  padding-bottom: -10px;
+  z-index: -10;
+}
+
+.yellow-title-md{
+  position: relative;
+  width: 120px;
+  padding: 0 0 2px;
+  margin: 0 auto;
+}
+.yellow-title-md:after{
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  border-bottom: 10px #feb320 solid;
+  padding-bottom: -10px;
+  z-index: -10;
+}
+
+.yellow-title-sm{
+  position: relative;
+  width: 56px;
+  padding: 0 0 2px;
+  margin: 0 auto;
+}
+.yellow-title-sm:after{
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  border-bottom: 10px #feb320 solid;
+  padding-bottom: -10px;
+  z-index: -10;
+}
+
+/*---------------------*\
+   end 標題底下的橘黃色塊
+\*---------------------*/
+
+
+/*--------*\
+  end font
+\*--------*/
+
+/*--------*\
+   button
+\*--------*/
+
+/*按鈕黑框線重疊*/
+.btn{
+  border-radius: 8px;
+  padding:4px 16px;
+}
+
+/*黃*/
+.btn-warning{
+  position: relative;
+  background-color: #feb320;
+  color: #000;
+  font-weight: 700;
+  margin: 32px 16px;
+  border: none;
+}
+.btn-warning:after{
+  content: '';
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  left: 0.6em;
+  top: 0.6em;
+  z-index: -10;
+}
+.btn-warning:hover,.btn-warning:active,.btn-warning:active:hover,.btn-warning:focus{
+  /*background-color: #e8a31e;*/
+  background-color: #000;
+  color: #feb320;
+  font-weight: 700;
+}
+
+/*綠*/
+.btn-success{
+  position: relative;
+  background-color: #4fb784;
+  color: #000;
+  font-weight: 700;
+  margin: 32px 16px;
+  border: none;
+}
+.btn-success:after{
+  content: '';
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  left: 0.6em;
+  top: 0.6em;
+  z-index: -10;
+}
+.btn-success:hover,.btn-success:active,.btn-success:active:hover,.btn-success:focus{
+  background-color: #000;
+  color: #4fb784;
+  font-weight: 700;
+}
+
+/*藍*/
+.btn-info{
+  position: relative;
+  background-color: #2894b0;
+  color: #000;
+  font-weight: 700;
+  margin: 32px 16px;
+  border: none;
+}
+.btn-info:after{
+  content: '';
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  left: 0.6em;
+  top: 0.6em;
+  z-index: -10;
+}
+.btn-info:hover,.btn-info:active,.btn-info:active:hover,.btn-info:focus{
+  background-color: #000;
+  color: #2894b0;
+  font-weight: 700;
+}
+
+/*粉紅*/
+.btn-danger{
+  position: relative;
+  background-color: #fe8c82;
+  color: #000;
+  font-weight: 700;
+  margin: 32px 16px;
+  border: none;
+}
+.btn-danger:after{
+  content: '';
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  left: 0.6em;
+  top: 0.6em;
+  z-index: -10;
+}
+.btn-danger:hover,.btn-danger:active,.btn-danger:active:hover,.btn-danger:focus{
+  background-color: #000;
+  color: #fe8c82;
+  font-weight: 700;
+}
+
+/*end 按鈕黑框線重疊*/
+
+/*login*/
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/****** LOGIN MODAL ******/
+.loginmodal-container {
+  padding: 30px;
+  max-width: 350px;
+  width: 100% !important;
+  background-color: #F7F7F7;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: roboto;
+}
+
+.loginmodal-container h1 {
+  text-align: center;
+  font-size: 1.8em;
+  font-family: roboto;
+}
+
+.loginmodal-container input[type=submit] {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.loginmodal-container input[type=text], input[type=password] {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-appearance: none;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  /* border-radius: 2px; */
+  padding: 0 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.loginmodal-container input[type=text]:hover, input[type=password]:hover {
+  border: 1px solid #b9b9b9;
+  border-top: 1px solid #a0a0a0;
+  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.loginmodal {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  height: 36px;
+  padding: 0 8px;
+/* border-radius: 3px; */
+/* -webkit-user-select: none;
+  user-select: none; */
+}
+
+.loginmodal-submit {
+  /* border: 1px solid #3079ed; */
+  border: 0px;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  background-color: #feb320;
+  border-radius: 10px;
+  padding: 17px 0px;
+  font-family: roboto;
+  font-size: 16px;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
+}
+
+.loginmodal-submit:hover {
+  /* border: 1px solid #2f5bb7; */
+  border: 0px;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #000000;
+  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
+}
+
+.loginmodal-container a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 400;
+  text-align: center;
+  display: inline-block;
+  opacity: 0.6;
+  transition: opacity ease 0.5s;
+} 
+
+.login-help{
+  font-size: 12px;
+}
+
+/*end login*/
+
+
+/*--------*\
+ end button
+\*--------*/
+
+/*--------*\
+    logo
+\*--------*/
+.logo {
+  display: inline-block;
+  width: 100%;
+  height: 64px;
+  background-image: url(../images/logo.png);
+  background-position: center;
+  /*撐滿容器*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*文字溢出*/
+  text-indent: 100%;
+  /*不換行*/
+  white-space: nowrap;
+  /*超出隱藏*/
+  overflow: hidden;
+  margin:8px 0; 
+  z-index: 1;
+}
+
+@media screen and (max-width:768px){
+  .logo {
+  position: absolute;
+  width: 100%;
+  background-image: url(../images/logo.png);
+  background-position: center;
+  /*撐滿容器*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*文字溢出*/
+  text-indent: 100%;
+  /*不換行*/
+  white-space: nowrap;
+  /*超出隱藏*/
+  overflow: hidden;
+  margin:8px 0; 
+  z-index: -1;
+}
+}
+
+.kv-logo {
+  display: inline-block;
+  width: 100%;
+  height: 240px;
+  background-image: url(../images/logo-black.png);
+  background-position: center;
+  /*撐滿容器*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*文字溢出*/
+  text-indent: 100%;
+  /*不換行*/
+  white-space: nowrap;
+  /*超出隱藏*/
+  overflow: hidden;
+  margin-top:80px;
+}
+
+.logo-black{
+  display: inline-block;
+  width: 100%;
+  height: 64px;
+  background-image: url(../images/logo-02.png);
+  background-position: center;
+  /*撐滿容器*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*文字溢出*/
+  text-indent: 100%;
+  /*不換行*/
+  white-space: nowrap;
+  /*超出隱藏*/
+  overflow: hidden;
+  margin:4px 0; 
+}
+/*--------*\
+  end logo
+\*--------*/
+
+/*--------*\
+   navbar
+\*--------*/
+
+.glyphicon{
+  margin-right:4px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar-inverse,
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover{
+  background-color: #feb320;
+  border-color:#feb320;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+  color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover{
+  color: #333;
+  transition: all 0.5s;
+}
+
+.navbar-inverse .navbar-nav>li>.active{
+  color: #333;
+}
+
+.cart{
+  cursor: pointer;
+}
+
+@media screen and (max-width:768px){
+  .navbar-header{
+    height: 80px;
+  }
+}
+/*--------*\
+ end navbar
+\*--------*/
+
+.col-sm-3{padding:15px;}
+
+
+/*--------*\
+    chef
+\*--------*/
+.img-responsive{
+  margin: 0 auto;
+}
+/*--------*\
+  end chef
+\*--------*/
+
+/*--------*\
+    mask
+\*--------*/
+
+.clip-circle {
+  clip-path: circle(92px at center);
+}
+
+/*--------*\
+  end mask
+\*--------*/
+
+.modal-backdrop{
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------- */
+/*end 共用*/
+
+/*--------*\
+     kv
+\*--------*/
+
+/*arrow*/
+.scroll {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-top:48px;
+}
+
+.arrow {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+.arrow-first {
+  -webkit-animation: arrow-movement 2s ease-in-out infinite;
+          animation: arrow-movement 2s ease-in-out infinite;
+}
+
+.arrow-second {
+  -webkit-animation: arrow-movement 2s 1s ease-in-out infinite;
+          animation: arrow-movement 2s 1s ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  background: #222;
+  content: '';
+  display: block;
+  height: 1.4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+}
+
+.arrow:before {
+  -webkit-transform: rotate(45deg) translateX(-23%);
+          transform: rotate(45deg) translateX(-23%);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.arrow:after {
+  -webkit-transform: rotate(-45deg) translateX(23%);
+          transform: rotate(-45deg) translateX(23%);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.kv p{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+}
+
+@-webkit-keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    top: 30%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    top: 30%;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* end arrow */
+/*--------*\
+   end kv
+\*--------*/
+
+/*--------*\
+    menu
+\*--------*/
+.menu{
+  width: 100%;
+  margin: 0 auto;
+}
+.menu-btn{
+  text-align: center;
+}
+
+.menu-left{
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  margin: 16px;
+}
+
+.menu-right{
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+  margin: 16px;
+}
+
+@media screen and (max-width:768px){
+  .menu-left{
+  width: 100%;
+  margin: 16px auto;
+   float: left;
+  }
+
+  .menu-right{
+    width: 100%;
+    margin: 16px auto;
+    float: right;
+  }
+}
+
+/*--------*\
+  end menu
+\*--------*/
+
+/*---------*\
+  jumbotron
+\*---------*/
+
+.index-banner{
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background-image: url(../images/index-banner.jpg);
+  background-position: center;
+  /*撐滿容器*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-banner{
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background-image: url(../images/about-banner.jpg);
+  background-position: center;
+  /*撐滿容器*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.menu-banner{
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background-image: url(../images/menu-banner.jpg);
+  background-position: center;
+  /*撐滿容器*/
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reservation-banner{
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background-image: url(../images/reservation-banner.jpg);
+  background-position: center;
+  /*撐滿容器*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.shop-banner{
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background-image: url(../images/shop-banner.jpg);
+  background-position: top;
+  /*撐滿容器*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.QA-banner{
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background-image: url(../images/QA-banner.jpg);
+  background-position: top;
+  /*撐滿容器*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/*---------*\
+end jumbotron
+\*---------*/
+
+
+/*---------------*\
+    reservation
+\*---------------*/
+.reservation{
+  text-align: center;
+}
+
+.info{
+  border:1px solid black;
+  width:36%;
+  height:200px;
+  overflow:auto;  /* 新增這行：當溢位時，自動顯示捲軸 */
+  margin: 16px auto;
+  text-align: left;
+  padding: 0 16px;
+}
+/*---------------*\
+  end reservation
+\*---------------*/
+
+/*--------*\
+    shop
+\*--------*/
+.menu-button {
+  width: 300px;
+  height: 250px;
+  margin: 100px auto;
+  animation-name: roll-in--menu;
+  animation-duration: 2s;
+}
+
+.menu-button:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+
+.menu-button--1 {
+  background: url(../images/menu-1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+.menu-button--2 {
+  background: url(../images/menu-2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+.menu-button--3 {
+  background: url(../images/menu-3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+.menu-button--4 {
+  background: url(../images/menu-4.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  cursor: pointer;
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 2s;
+}
+
+.dish {
+  width: 300px;
+  height: 200px;
+  margin: 10px auto;
+  animation-name: roll-in--dish;
+  animation-duration: 2s;
+}
+
+.dish-1 {
+  background: url(../images/food-01.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+}
+
+.dish-2 {
+  background: url(../images/food-02.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+}
+
+.dish-3 {
+  background: url(../images/food-03.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+}
+
+.dish-4 {
+  background: url(../images/food-04.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 200px;
+}
+
+@keyframes roll-in--menu {
+  from {
+    margin-left: -10%;
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+  to {
+    margin-left: 37%;
+    transform: rotate(720deg);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-in--dish {
+  from {
+    margin-right: -100%;
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+  to {
+    margin-right: 10%;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    transform:translate(0px,-30px);
+    opacity: 0;
+  }
+  to {
+    transform:translate(0px,0px);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:768px){
+  @keyframes roll-in--menu {
+    from {
+      transform: rotate(180deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(720deg);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes roll-in--dish {
+    from {
+      transform: rotate(360deg);
+      opacity: 0;
+    }
+    to {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in {
+    from {
+      transform:translate(0px,-30px);
+      opacity: 0;
+    }
+    to {
+      transform:translate(0px,0px);
+      opacity: 1;
+    }
+  }
+}
+
+/*--------*\
+  end shop
+\*--------*/

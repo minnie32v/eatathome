@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <title>回家粗飯 | EAT AT HOME</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- strat navbar -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand logo">回家粗飯 EAT AT HOME</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html"><h4><i class="fas fa-couch"></i>家的味道</h4></a></li>
+            <li><a href="menu.html"><h4><i class="fas fa-concierge-bell"></i>手路菜</h4></a></li>
+            <li><a href="reservation.html"><h4><i class="fas fa-utensils"></i>回家坐坐</h4></a></li>
+            <li><a class="active" href="shop.html"><h4><i class="fas fa-drum"></i></i>帶便當</h4></a></li>
+            <li><a href="QA.html"><h4><i class="fas fa-lightbulb"></i>生活公約</h4></a></li>
+            <!-- <li><a href="#"><h4><i class="fas fa-bell"></i>家裡的事</h4></a></li> -->
+            <!-- Login -->
+            <li><a href="#" data-toggle="modal" data-target="#login-modal"><h4><i class="fas fa-key"></i>Login</h4></a></li>
+            <li><a class="cart"><h4><i class="fas fa-shopping-cart"></i><span id="cartCount">0</span></h4></a></li>
+
+            <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog">
+                <div class="loginmodal-container">
+                  <h1>請登入會員</h1><br>
+                  <form>
+                  <input type="text" name="user" placeholder="帳號">
+                  <input type="password" name="pass" placeholder="密碼">
+                  <input type="submit" name="login" class="login loginmodal-submit" value="登  入">
+                  </form>
+                  <div class="login-help">
+                  <a href="#">註冊</a> | <a href="#">忘記密碼</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end Login -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- start jumbotron -->
+    <div class="shop-banner"></div>
+    <!-- end jumbotron -->
+    
+    <!-- shop -->
+    <div class="container-fluid bg-3 text-center">
+      <!-- 家常菜 -->
+      <div class="menu-button menu-button--1" onclick="document.getElementById('menu-1').style.display=''"></div>
+      <div id="menu-1" class="text-center" style="display: none">
+        <h2 class="yellow-title-md fade-in">家常菜</h2>
+        <div class="row box">
+          <div class="col-sm-3">
+            <div class="dish dish-1 clip-circle"></div>
+            <h4 class="fade-in">班迪克雙蛋</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">班迪克雙蛋</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-2 clip-circle"></div>
+            <h4 class="fade-in">香橙烤雞腿</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">香橙烤雞腿</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-3 clip-circle"></div>
+            <h4 class="fade-in">時蔬總匯</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">時蔬總匯</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-4 clip-circle"></div>
+            <h4 class="fade-in">洋蔥養生雞湯</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">洋蔥養生雞湯</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+        </div>
+      </div>
+      <!-- end 家常菜 -->
+
+      <!-- 輕食餐 -->
+      <div class="menu-button menu-button--2" onclick="document.getElementById('menu-2').style.display=''"></div>
+      <div id="menu-2" class="text-center" style="display: none">
+        <h2 class="yellow-title-md fade-in">輕食餐</h2>
+        <div class="row box">
+          <div class="col-sm-3">
+            <div class="dish dish-1 clip-circle"></div>
+            <h4 class="fade-in">班迪克雙蛋</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">班迪克雙蛋</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-2 clip-circle"></div>
+            <h4 class="fade-in">香橙烤雞腿</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">香橙烤雞腿</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-3 clip-circle"></div>
+            <h4 class="fade-in">時蔬總匯</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">時蔬總匯</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-4 clip-circle"></div>
+            <h4 class="fade-in">洋蔥養生雞湯</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">洋蔥養生雞湯</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+        </div>
+      </div>
+      <!-- end 輕食餐 -->
+
+      <!-- 下酒菜 -->
+      <div class="menu-button menu-button--3" onclick="document.getElementById('menu-3').style.display=''"></div>
+      <div id="menu-3" class="text-center" style="display: none">
+        <h2 class="yellow-title-md fade-in">家常菜</h2>
+        <div class="row box">
+          <div class="col-sm-3">
+            <div class="dish dish-1 clip-circle"></div>
+            <h4 class="fade-in">班迪克雙蛋</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">班迪克雙蛋</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-2 clip-circle"></div>
+            <h4 class="fade-in">香橙烤雞腿</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">香橙烤雞腿</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-3 clip-circle"></div>
+            <h4 class="fade-in">時蔬總匯</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">時蔬總匯</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-4 clip-circle"></div>
+            <h4 class="fade-in">洋蔥養生雞湯</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">洋蔥養生雞湯</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+        </div>
+      </div>
+      <!-- end 下酒菜 -->
+
+      <!-- 小點心 -->
+      <div class="menu-button menu-button--4" onclick="document.getElementById('menu-4').style.display=''"></div>
+      <div id="menu-4" class="text-center" style="display: none">
+        <h2 class="yellow-title-md fade-in">家常菜</h2>
+        <div class="row box">
+          <div class="col-sm-3">
+            <div class="dish dish-1 clip-circle"></div>
+            <h4 class="fade-in">班迪克雙蛋</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">班迪克雙蛋</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-2 clip-circle"></div>
+            <h4 class="fade-in">香橙烤雞腿</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">香橙烤雞腿</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-3 clip-circle"></div>
+            <h4 class="fade-in">時蔬總匯</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">時蔬總匯</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+          <div class="col-sm-3">
+            <div class="dish dish-4 clip-circle"></div>
+            <h4 class="fade-in">洋蔥養生雞湯</h4>
+            <!-- 菜單按鈕 -->
+            <button type="button" class="btn btn-warning" onclick="count()"><h5><i class="fas fa-plus"></i></h5></button>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal"><h5><i class="fas fa-list"></i></h5></button>
+            <!-- lightbox -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+                <!-- 菜色內容 -->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">洋蔥養生雞湯</h4>
+                  </div>
+                  <div class="modal-body">
+                    <h4>餐點描述</h4>
+                    <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+                    <p>成分：五穀米、豬里肌、九層塔、去皮雞腿肉、義式香料、藥膳時蔬、黃薑粉、醬油、鹽、橄欖油</p>
+                    <p>加熱方式: 請參照一般使用說明</p>
+                    <p>總重: 560 公克 +- 5%</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                <!-- end 菜色內容 -->
+              </div>
+            </div>
+            <!-- end lightbox -->
+          </div>
+        </div>
+      </div>
+      <!-- end 小點心 -->
+
+    <!-- end shop -->
+
+    <!-- footer -->
+    <footer class="container-fluid text-center">
+      <div class="logo-black">回家粗飯 EAT AT HOME</div>
+      <h5>02-12345678</h5>
+      <h5>台北市南京東路三段256號</h5>
+      <h2 class="yellow-title-sm">開動</h2>
+      <h2>！</h2>
+    </footer>
+    <!-- end footer -->
+    <!-- 錨點滑動 -->
+    <script>
+    $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+    $('html, body').animate({
+    scrollTop: target.offset().top
+    }, 1000);
+    return false;
+    }
+    }
+    });
+    });
+    </script>
+
+    <script>
+    // 購物車數字隨著購買商品數目增加
+    let cartCount = 0
+    function count(){
+      cartCount += 1
+      document.getElementById('cartCount').innerHTML = cartCount
+    }
+    </script>
+  </body>
+</html>

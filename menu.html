@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <title>回家粗飯 | EAT AT HOME</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- strat navbar -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand logo">回家粗飯 EAT AT HOME</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html"><h4><i class="fas fa-couch"></i>家的味道</h4></a></li>
+            <li><a class="active" href="menu.html"><h4><i class="fas fa-concierge-bell"></i>手路菜</h4></a></li>
+            <li><a href="reservation.html"><h4><i class="fas fa-utensils"></i>回家坐坐</h4></a></li>
+            <li><a href="shop.html"><h4><i class="fas fa-drum"></i></i>帶便當</h4></a></li>
+            <li><a href="QA.html"><h4><i class="fas fa-lightbulb"></i>生活公約</h4></a></li>
+            <!-- <li><a href="#"><h4><i class="fas fa-bell"></i>家裡的事</h4></a></li> -->
+            <!-- Login -->
+            <li><a href="#" data-toggle="modal" data-target="#login-modal"><h4><i class="fas fa-key"></i>Login</h4></a></li>
+            <li><a class="cart"><h4><i class="fas fa-shopping-cart"></i><span id="cartCount">0</span></h4></a></li>
+
+            <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog">
+                <div class="loginmodal-container">
+                  <h1>請登入會員</h1><br>
+                  <form>
+                  <input type="text" name="user" placeholder="帳號">
+                  <input type="password" name="pass" placeholder="密碼">
+                  <input type="submit" name="login" class="login loginmodal-submit" value="登  入">
+                  </form>
+                  <div class="login-help">
+                  <a href="#">註冊</a> | <a href="#">忘記密碼</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end Login -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- start jumbotron -->
+    <div class="menu-banner"></div>
+    <!-- end jumbotron -->
+    <!-- menu -->
+    <div class="container">
+      <div class="content">
+        <div class="menu">
+          <div class="menu-left">
+            <img src="images/food-01.jpg" class="img-responsive" style="width:100%" alt="Image">
+          </div
+          ><div class="menu-right">
+            <h2>菠菜豬排班迪克蛋</h2>
+            <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="menu-left">
+            <h2>橙汁義式香烤雞腿</h2>
+            <p>運用舒肥法(sous-vide)製作的薑黃豬里肌，薑黃等佐料深入每一寸里肌肉，保有營養濕潤的口感。還有義大利風情的軟嫩舒肥雞腿肉增加蛋白質!搭配低GI的五穀米及大量的膳食纖維，不啻試健身路上持之以恆的利器。</p>
+          </div>
+          <div class="menu-right">
+            <img src="images/food-02.jpg" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+        </div>
+        <div class="menu-btn box">
+          <button type="button" class="btn btn-warning"><a href="reservation.html"><h5>我想回家坐坐</h5></a></button>
+          <button type="button" class="btn btn-warning"><a href="shop.html"><h5>來去帶便當！</h5></a></button>
+        </div>
+      </div>
+      
+      
+      
+    </div>
+    <!-- end menu -->
+    <!-- footer -->
+    <footer class="container-fluid text-center">
+      <div class="logo-black">回家粗飯 EAT AT HOME</div>
+      <h5>02-12345678</h5>
+      <h5>台北市南京東路三段256號</h5>
+      <h2 class="yellow-title-sm">開動</h2>
+      <h2>！</h2>
+    </footer>
+    <!-- end footer -->
+    <!-- 錨點滑動 -->
+    <script>
+    $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+    $('html, body').animate({
+    scrollTop: target.offset().top
+    }, 1000);
+    return false;
+    }
+    }
+    });
+    });
+    </script>
+  </body>
+</html>

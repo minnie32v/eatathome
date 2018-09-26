@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <title>回家粗飯 | EAT AT HOME</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- strat navbar -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand logo">回家粗飯 EAT AT HOME</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html"><h4><i class="fas fa-couch"></i>家的味道</h4></a></li>
+            <li><a href="menu.html"><h4><i class="fas fa-concierge-bell"></i>手路菜</h4></a></li>
+            <li><a href="reservation.html"><h4><i class="fas fa-utensils"></i>回家坐坐</h4></a></li>
+            <li><a href="shop.html"><h4><i class="fas fa-drum"></i></i>帶便當</h4></a></li>
+            <li><a class="active" href="QA.html"><h4><i class="fas fa-lightbulb"></i>生活公約</h4></a></li>
+            <!-- <li><a href="#"><h4><i class="fas fa-bell"></i>家裡的事</h4></a></li> -->
+            <!-- Login -->
+            <li><a href="#" data-toggle="modal" data-target="#login-modal"><h4><i class="fas fa-key"></i>Login</h4></a></li>
+            <li><a class="cart"><h4><i class="fas fa-shopping-cart"></i><span id="cartCount">0</span></h4></a></li>
+
+            <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+              <div class="modal-dialog">
+                <div class="loginmodal-container">
+                  <h1>請登入會員</h1><br>
+                  <form>
+                  <input type="text" name="user" placeholder="帳號">
+                  <input type="password" name="pass" placeholder="密碼">
+                  <input type="submit" name="login" class="login loginmodal-submit" value="登  入">
+                  </form>
+                  <div class="login-help">
+                  <a href="#">註冊</a> | <a href="#">忘記密碼</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end Login -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- start jumbotron -->
+    <div class="QA-banner"></div>
+    <!-- end jumbotron -->
+
+    <!-- shop -->
+    <div class="container">
+      <div class="content">
+        <h2 class="yellow-title-md text-center">如何帶便當</h2>
+        <div class="box">
+          <h4>線上訂購</h4>
+          <ul>
+            <li>線上刷卡: 採用紅陽科技及TapPay金流，不保留信用卡請安心使用</li>
+            <li>貨到付款: 由黑貓客樂得收取現金，會酌收手續費，詳見 常見問題第8點。</li>
+          </ul>
+          <h4>收件須知</h4>
+          <ul>
+            <li>訂購到出貨約需4個工作天，可以指定收件日期及時段。(周二至周六上午至18:00)</li>
+            <li>收到請清點數量、品項並請冷凍保存。</li>
+            <li>如遇到颱風、地震等不可避免之自然天災，則出貨日期自動順延。</li>
+          </ul>
+          <h4>退換貨說明</h4>
+          <ul>
+            <li>因生鮮食品、易腐敗商品，無7天免費鑑賞期。</li>
+            <li>任何的退換貨必須於接獲產品後7天內提出。</li>
+            <li>非經本商店事先認可之退換貨概不受理。</li>
+            <li>一但寄出，即便客人要求退貨，收回的產品也不會再回收，也不可能再寄給下個客人。FitMe健身餐以貨到付款寄出時，請不要拒收。</li>
+            <li>由於食材成本高，並且有食物新鮮和產品保存期限的問題，寄出後我們無法退款給您。 如遇有商品瑕疵或遺缺，由我們補寄新貨。如還有任何疑慮，歡迎與我們聯繫。</li>
+          </ul>
+          <h4>退款辦法</h4>
+          <ul>
+            <li>當本商店收到您的退貨郵件後，本商店將先對商品進行審查，確認退貨商品是因本商店商品瑕疵之原因或商品非因瑕疵而符合退貨標準時，我們將為您辦理退款手續，退款申請預計3~5 工作天，我們的退款方式將採用：</li>
+            <li>如果您是採用信用卡付款的客戶，我們將以信用卡退款的方式退款給您,您將會收到一封信用卡退款成功的通知e-mail。</li>
+            <li>如果您是採貨到付款付款的客戶，我們會將款項退到您的銀行或郵局個人帳戶內。</li>
+            <li>有任何問題歡迎您以e-mail或來電給本商店，我們將立即為您處理。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- end shop -->
+
+    <!-- footer -->
+    <footer class="container-fluid text-center">
+      <div class="logo-black">回家粗飯 EAT AT HOME</div>
+      <h5>02-12345678</h5>
+      <h5>台北市南京東路三段256號</h5>
+      <h2 class="yellow-title-sm">開動</h2>
+      <h2>！</h2>
+    </footer>
+    <!-- end footer -->
+    <!-- 錨點滑動 -->
+    <script>
+    $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+    $('html, body').animate({
+    scrollTop: target.offset().top
+    }, 1000);
+    return false;
+    }
+    }
+    });
+    });
+    </script>
+  </body>
+</html>
